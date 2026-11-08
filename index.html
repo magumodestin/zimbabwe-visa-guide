@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where can a Zimbabwean passport take you?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Where can a Zimbabwean passport take you?</h1>
+    <p class="lead">Every destination, sorted by what you need to do before you land.</p>
+
+    <div class="meter" id="meter" role="img" aria-label="Share of destinations by entry requirement"></div>
+    <div class="legend" id="legend"></div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Find a country" aria-label="Find a country">
+      <p class="showing" id="showing" aria-live="polite"></p>
+    </div>
+    <ul class="grid" id="grid"></ul>
+    <p class="note">Data comes from the Passport Index dataset and may not be fully current. Visa rules change often, so confirm on the destination's official immigration site before you travel.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

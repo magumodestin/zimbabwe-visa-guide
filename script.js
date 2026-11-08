@@ -82,5 +82,23 @@ typeEl.addEventListener("change", () => {
 });
 searchEl.addEventListener("input", renderGrid);
 
+// light / dark theme (light is the default, choice saved in localStorage)
+const themeBtn = document.getElementById("themeToggle");
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  const toDark = theme === "light";
+  themeBtn.querySelector(".icon").textContent = toDark ? "🌙" : "☀️";
+  themeBtn.querySelector(".label").textContent = toDark ? "Dark" : "Light";
+  const text = toDark ? "Switch to dark mode" : "Switch to light mode";
+  themeBtn.setAttribute("aria-label", text);
+  themeBtn.title = text;
+}
+themeBtn.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next);
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
+applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
+
 renderHeader();
 renderGrid();

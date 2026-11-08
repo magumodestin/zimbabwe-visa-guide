@@ -8,9 +8,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply saved theme before the page paints (light is the default)
+    (function () {
+      var t = "light";
+      try { t = localStorage.getItem("theme") === "dark" ? "dark" : "light"; } catch (e) {}
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
 </head>
 <body>
   <header class="hero">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+      <span class="icon" aria-hidden="true">🌙</span>
+      <span class="label">Dark</span>
+    </button>
     <h1>Where can a Zimbabwean passport take you?</h1>
     <p class="lead">Every destination, sorted by what you need to do before you land.</p>
 

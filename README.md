@@ -12,6 +12,7 @@ Built with plain HTML, CSS and JavaScript. No frameworks, no build step.
 - "Visa type" dropdown (synced with the buttons and colour bar) to show only one category, such as eVisa
 - Search box that works together with the filters
 - Country flags and country names generated from ISO codes
+- Light and dark mode button (light by default), choice saved in localStorage
 - Responsive layout for phones, tablets and desktops
 
 ## Categories

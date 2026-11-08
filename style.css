@@ -21,6 +21,9 @@ h1{font-size:clamp(2.2rem,6vw,4.4rem);font-weight:800;line-height:1.02;letter-sp
 
 main{max-width:1100px;margin:0 auto;padding:16px 24px 64px}
 .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:24px 0}
+.field{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+#type{padding:14px 40px 14px 16px;font:inherit;font-size:1.05rem;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+#type:focus-visible{outline:3px solid var(--voa);outline-offset:2px}
 #search{flex:1 1 300px;max-width:440px;padding:14px 18px;font:inherit;font-size:1.05rem;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px}
 #search::placeholder{color:var(--muted)}
 .showing{color:var(--muted);font-size:.95rem}

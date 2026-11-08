@@ -25,6 +25,7 @@ const legendEl = document.getElementById("legend");
 const gridEl = document.getElementById("grid");
 const showingEl = document.getElementById("showing");
 const searchEl = document.getElementById("search");
+const typeEl = document.getElementById("type");
 let active = "all";
 
 // one flat list of every destination with its category
@@ -37,8 +38,17 @@ function renderHeader() {
     `<button class="seg ${active === c.id ? "on" : ""}" data-id="${c.id}" style="--c:${c.color};--n:${c.countries.length}" title="${c.title}: ${c.countries.length}">${c.countries.length > 12 ? c.countries.length : ""}</button>`).join("");
   meterEl.classList.toggle("filtered", active !== "all");
   const pills = [{ id: "all", title: "All destinations", n: all.length }, ...categories.map(c => ({ id: c.id, title: c.title, n: c.countries.length, color: c.color }))];
+  renderSelect();
   legendEl.innerHTML = pills.map(p =>
     `<button class="pill ${active === p.id ? "on" : ""}" data-id="${p.id}" ${p.color ? `style="--c:${p.color}"` : ""}>${p.color ? "<i></i>" : ""}${p.title} <b>${p.n}</b></button>`).join("");
+}
+
+function renderSelect() {
+  if (!typeEl.options.length) {
+    typeEl.innerHTML = [`<option value="all">All visa types (${all.length})</option>`,
+      ...categories.map(c => `<option value="${c.id}">${c.title} (${c.countries.length})</option>`)].join("");
+  }
+  typeEl.value = active;
 }
 
 function renderGrid() {
@@ -62,6 +72,11 @@ legendEl.addEventListener("click", e => {
   const b = e.target.closest(".pill");
   if (!b) return;
   active = b.dataset.id;
+  renderHeader();
+  renderGrid();
+});
+typeEl.addEventListener("change", () => {
+  active = typeEl.value;
   renderHeader();
   renderGrid();
 });

@@ -1,9 +1,5 @@
 # Zimbabwe Visa Guide
 
-[Visit the live website](https://zimbabwevisaguide.vercel.app/)
-
-A simple front-end web page that shows...
-
 A simple front-end web page that shows where a Zimbabwean passport holder can travel and what entry requirement applies for each destination: visa free, visa on arrival, eTA, eVisa (apply online), or visa required.
 
 Built with plain HTML, CSS and JavaScript. No frameworks, no build step.
@@ -13,6 +9,7 @@ Built with plain HTML, CSS and JavaScript. No frameworks, no build step.
 - Lists 198 destinations, each placed in one entry category
 - A colour bar at the top shows the share of destinations in each category, and clicking a section filters the list
 - Filter buttons with a live count for each category
+- "Visa type" dropdown (synced with the buttons and colour bar) to show only one category, such as eVisa
 - Search box that works together with the filters
 - Country flags and country names generated from ISO codes
 - Responsive layout for phones, tablets and desktops

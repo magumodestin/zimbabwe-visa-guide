@@ -1,13 +1,10 @@
-// Country codes (ISO 2-letter) grouped by entry requirement for Zimbabwean passport holders.
-// Source: Passport Index dataset (github.com/ilyankou/passport-index-dataset). Names come from the browser.
-// Flags load from flagcdn.com using the code.
 const names = new Intl.DisplayNames(["en"], { type: "region" });
 const categories = [
   { id: "free", title: "Visa free access", color: "var(--free)", codes: ["AO", "BB", "BJ", "BS", "BW", "BZ", "CD", "DM", "EC", "FJ", "FM", "GH", "GM", "HK", "HT", "IR", "KN", "LS", "MU", "MW", "MY", "MZ", "NA", "PH", "PS", "RW", "SC", "SG", "SZ", "TT", "TZ", "UG", "VC", "VU", "ZA", "ZM"] },
   { id: "voa", title: "Visa on arrival", color: "var(--voa)", codes: ["BD", "BI", "BO", "CV", "DJ", "ET", "GW", "JO", "KH", "KM", "LC", "LK", "MG", "MO", "MR", "MV", "NG", "NI", "PW", "SN", "TL", "TV", "WS"] },
   { id: "eta", title: "eTA", color: "var(--eta)", codes: ["CI", "KE"] },
-  { id: "evisa", title: "Visa online (eVisa)", color: "var(--evisa)", codes: ["AE", "AG", "AL", "AU", "BF", "BH", "BT", "CM", "CO", "CU", "GA", "GE", "GN", "GQ", "ID", "IN", "IQ", "KG", "KR", "KZ", "LY", "MN", "OM", "PG", "PK", "QA", "RU", "SL", "SO", "SS", "ST", "SV", "SY", "TG", "TJ", "VN"] },
-  { id: "req", title: "Visa required", color: "var(--req)", codes: ["AD", "AF", "AM", "AR", "AT", "AZ", "BA", "BE", "BG", "BN", "BR", "BY", "CA", "CF", "CG", "CH", "CL", "CN", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EE", "EG", "ER", "ES", "FI", "FR", "GB", "GD", "GR", "GT", "GY", "HN", "HR", "HU", "IE", "IL", "IS", "IT", "JM", "JP", "KI", "KP", "KW", "LA", "LB", "LI", "LR", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MH", "MK", "ML", "MM", "MT", "MX", "NE", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PL", "PT", "PY", "RO", "RS", "SA", "SB", "SD", "SE", "SI", "SK", "SM", "SR", "TD", "TH", "TM", "TN", "TO", "TR", "TW", "UA", "US", "UY", "UZ", "VA", "VE", "XK", "YE"] },
+  { id: "evisa", title: "Visa online (eVisa)", color: "var(--evisa)", codes: ["AE", "AG", "AL", "AU", "BF", "BH", "BT", "CM", "CO", "CU", "GA", "GE", "GN", "GQ", "ID", "IN", "IQ", "KG", "KR", "KZ", "LY", "MN", "OM", "PG", "PK", "QA", "RU", "SL", "SO", "SS", "ST", "SV", "SY", "TG", "TH", "TJ", "VN"] },
+  { id: "req", title: "Visa required", color: "var(--req)", codes: ["AD", "AF", "AM", "AR", "AT", "AZ", "BA", "BE", "BG", "BN", "BR", "BY", "CA", "CF", "CG", "CH", "CL", "CN", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EE", "EG", "ER", "ES", "FI", "FR", "GB", "GD", "GR", "GT", "GY", "HN", "HR", "HU", "IE", "IL", "IS", "IT", "JM", "JP", "KI", "KP", "KW", "LA", "LB", "LI", "LR", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MH", "MK", "ML", "MM", "MT", "MX", "NE", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PL", "PT", "PY", "RO", "RS", "SA", "SB", "SD", "SE", "SI", "SK", "SM", "SR", "TD", "TM", "TN", "TO", "TR", "TW", "UA", "US", "UY", "UZ", "VA", "VE", "XK", "YE"] },
 ].map(c => ({
   ...c,
   countries: c.codes.map(code => {

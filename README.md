@@ -1,5 +1,8 @@
-visit website here "https://zimbabwevisaguide.vercel.app/"
 # Zimbabwe Visa Guide
+
+[Visit the live website](https://zimbabwevisaguide.vercel.app/)
+
+A simple front-end web page that shows...
 
 A simple front-end web page that shows where a Zimbabwean passport holder can travel and what entry requirement applies for each destination: visa free, visa on arrival, eTA, eVisa (apply online), or visa required.
 
